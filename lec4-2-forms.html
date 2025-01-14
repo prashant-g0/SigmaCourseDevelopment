@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <h1>Forms in HTML</h1>
+    <p>Forms are used to collect data from user. <br> Implemented using &lt; form &gt; &lt; /form &gt; tag.</p>
+
+    <h1>Attributes of form tag</h1>
+
+    <h3>Action attribute</h3>
+    <p>Action attribute is used todefine what action needs to be performed when a form is submitted or where the form data needs to be sent.</p>
+    <p>&lt; forms action=&quot/action.php&quot; &gt;</p>
+    <hr>
+
+    <h1>Input Element</h1>
+    <p>Used to create multiple form controls. <br> there are multiple types of input that canbe created using type attribute. <br> <h4>Popular input types are: </h4></p>
+    <ul>
+        <li>input type = text (Default)</li>
+        <li>input type = password</li>
+        <li>input type = number</li>
+        <li>input type = time</li>
+        <li>input type = color</li>
+    </ul>
+    <form action="#">
+        Username: <input type="text"> <br>
+        Password: <input type="password" name="" id=""> <br>
+        Phone: <input type="number" name="" id=""> <br>
+        Time: <input type="time" name="" id=""><br>
+        Color: <input type="color" name="" id="">
+        <button>Submit</button>
+    </form>
+
+    <h3>Placeholder attribute</h3>
+    <p>Used to tell more information about the input type to the user.</p>
+    <p>&lt;input type = &quot;text&quot; placeholder = &quot;enter name&quot; &gt;</p>
+    <input type="text" placeholder="Enter name">
+
+    <h3>Label attribute</h3>
+    <p>Label element represents a caption for an item in a user interface. <br> We form connection between Label and input by using Id attribute in input and for attribute in label. </p>
+
+    <label for="Username"> Username: </label>
+    <input type="text" id="Username" placeholder="Enter your name">
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" id="password" placeholder="Password">
+    <hr>
+
+    <h1>Button Element</h1>
+    <p>&lt;button&gt; Submit &lt;/button&gt;</p>
+    <button>Submit</button>
+    <p><b>Type Attributes of button</b></p>
+    <ul>
+        <li>Type: submit; is used to perform submit action in forms.</li>
+        <li>Type: button: is used to perform simple buttom action defined by user.</li>
+        <li>Type: reset: is used to reset the data filled in forms.</li>
+    </ul>
+
+    <p><b>Button using input element</b></p>
+    <p>Input type = submit</p>
+    <input type="button" value="button">
+    <input type="submit" value="submit">
+    <hr>
+
+    <h3>Name attribute</h3>
+    <p>Everything in form is saved as name:value pair. <br> &lt;input type=text placeholder=Enter-name id=Username name=Username &gt;</p>
+    <hr>
+
+    <h1>Practice 8: Solution</h1>
+    <form action="https://www.google.com/search?">
+        <div>
+            <label for="Search"><b>Search on google</b></label>
+            <input type="text" placeholder="Search" id="Search" name="q">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    <hr>
+
+    <h3>Input type=checkbox</h3>
+    <input type="checkbox" name="age" id="age">
+    <label for="age">I am 18<sup>+</sup></label>
+    <input type="checkbox" name="age" id="age" checked>
+    <label for="age">i am 18+</label>
+    <p>We  can use checked attribute in input for default status as checked otherwise default status is not checked. <br> We can select multiple options using checkbox.</p>
+    <hr>
+
+    <h3>Input type=radio</h3>
+    <input type="radio" name="age" id="age" value="18">
+    <label for="age">I am 18<sup>+</sup></label>
+    <input type="radio" name="age" id="age" value="!18" checked>
+    <label for="age">i am less than 18</label>
+    <p>We  can use checked attribute in input for default status as checked otherwise default status is not checked. <br> We can only choose one option using radio. <br> While using radio button we need to use name attribute same for every option then only we can group them. <br> To identify the choosed option we use value attribute. <br> If we give same name to each option then ratio will act as checkbox.</p>
+    <hr>
+
+    <h1>Select Element</h1>
+    <h3>Dropdown Menu Element</h3>
+    <form action="#">
+        <div>
+            <p>Choose your profession</p>
+            <select name="profession" id="profession">
+                <option>--Select your option--</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            <button type="submit">Submit</button>
+        </div>
+        <p>To  preselect any option we use selected attribute, else the first option is default selected.</p>
+    </form>
+
+    <form action="#">
+        <div>
+            <p>Choose your profession</p>
+            <select name="profession" id="profession">
+                <option>--Select your option--</option>
+                <option value="student">Student</option>
+                <option value="teacher" selected>Teacher</option>
+            </select>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <hr>
+
+    <h3>Range Input Atttribute</h3>
+    <label for="volume">Volume:</label>
+    <input type="range" name="volume" id="volume" min="0" max="100" step="10" value="70">
+    <p>Four attributes are important in range i.e. min, max, step, and value. <br>min sets the min value of range <br> max sets the max value of range <br> step is value for each level <br> value sets the default valuue of range. </p>
+    <hr>
+
+    <h3>Text area</h3>
+    <p>It is used to take large inputs like feedback, message, or paragraph.</p>
+    <label for="feedback">Feedback:</label>
+    <textarea name="feedback" id="feedback"></textarea>
+    <p>default: 2 rows and 10 column space. <br> to change defult values; rows and cols attribute is used. </p>
+    <hr>
+
+    <h1>Practice 9: Solution</h1>
+    <h2>Registration form</h2>
+    <form action="#">
+        <div>
+            <input type="text" placeholder="First name" name="First">
+            <input type="text" placeholder="Last name" name="Last">
+        </div>
+        <label for="gender">Please select gender</label>
+        <select name="gender" id="dender">
+            <option value="">--Select Your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+        <div>
+            Do you agree to all type of services?
+            <input type="checkbox" name="agree" id="agree" Checked> <label for="agree">Yes, I agree!</label>
+        </div>
+        <button>Register</button>
+    </form>
+    <hr>
+
+    <p>Curated with &hearts;</p>
+
+
+
+</body>
+</html>
