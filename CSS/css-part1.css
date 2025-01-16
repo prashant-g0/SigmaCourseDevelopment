@@ -1,0 +1,22 @@
+h1{
+    color: red;
+    background-color: yellow;
+}
+
+h2{
+    color: orange;
+}
+
+button{
+    background-color: blue;
+    color: white;
+}
+
+p{
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: azure;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="css-part1.css"> -->
+    <style>
+        /* h3{
+            color: pink;
+        } */
+         /* CSS for solution 2
+          h1{
+            font-family: 'league spartan';
+            color: #ffa511;
+            text-align: center;
+            font-size: 55px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            text-decoration: teal double underline;
+            text-transform: uppercase;
+         } */
+    </style>
+</head>
+<body>
+    <h1>CSS:  Cascading Style Sheet</h1>
+    <p>CSS describes the <b>Style</b> of the content i.e. HTML. <br> HTML acts as a skeleton and CSS makes the skeleton look good and appeling.</p>
+    <hr>
+
+    <h1>Basic format of CSS</h1>
+    <p>h1{ <br> color: red; <br> }</p>
+    <p>Here, h1 is selector  (selectes which tag or id is accountable for css) <br> color is property (this will be applied to the selector content)<br> red is value(for the property)</p>
+    <hr>
+
+    <h1>How to include CSS styles</h1>
+    <p>1. Inline css: writing style directly inline on each element in html file. <br> &lt; h2 styles=&quot;color:blue;&quot;&gt; Content &lt;/h2&gt;</p>
+    <h2 style="color: blue;">Content</h2> 
+    <p>2. Using style tag: style is added using &lt; style &gt; tag in html file inside head tag. <br> &lt; style &gt; <br>h3{ <br> color: pink; <br> } <br> &lt; /style &gt;</p>
+    <h3>Content</h3>
+    <p>3. External stylesheet: writing style in a separate css file and linking with html file. <br> &lt;head&gt; <br> &lt;Link rel=&quot;stylesheet&quot href=&quot;style.css&quot; &gt; <br> &lt;/head&gt;</p>
+    <h2>Content</h2>
+    <hr>
+
+    <h1>Practice 1: Solution</h1>
+    <h2>Hi there!</h2>
+    <p>My name is tom &amp; I am there to help you.</p>
+    <button>Need help!</button>
+    <hr>
+
+    <h1>Color systems</h1>
+    <p>Named color eg. color:blue; <br> Each browser recognizes at least 140 named colors.</p>
+    <p>RGB color eg. rgb(140,220,150 <br> Red Green Blue : 0-225</p>
+    <p>Hexadecimal or Hex codes eg. color:#ffffff; <br> Every two digits indicate RGB.</p>
+    <hr>
+
+    <h1>Text Properties</h1>
+    <p>1. Text align: Used to ensure the alignment of text (left, right, center, justify). </p>
+    <p>2. Text weight: Used to ensure the boldness and lightness of a text. (100-900: normal = 400, bold = 700, 100, bolder, lighter)</p>
+    <p>3. Text decoration: Used to design the text (underline, strike, overline, etc) <br> We can creatively play with text decoration by changing colors and styles. <br> text-decoration-color: red; <br> text-decoration-styles: wavy;</p>
+    <p>4. Line height: Ensures the spacing between two lines</p>
+    <p>5. Letter spacing: Ensures the spacing between letters.</p>
+    <p>6. Font size: Defines the size of text.</p>
+    <hr>
+
+    <h1>Units in CSS</h1>
+    <p>1. Absolute: px, pt, pc, cm, mm, in  <br> 1 inch = 96px <br> 1 inch = 72pt <br>12 pt = 1pc <br> Not suitable for responsiveness.</p>
+    <p>2. Relative: %, em, rem, ch, vh, vw, and many more.. <br> Relative to parent.</p>
+    <hr>
+
+    <h1>Font family</h1>
+    <p>font-family: ariel;</p>
+    <p>font-family: ariel, sans-serif, didot; <br> here multiple font family is defines beacause if one doesn't work use the next one.</p>
+    <p>We can explore multiple font styles <a href="https://www.cssfontstack.com">@cssfontstack</a></p>
+    <hr>
+
+    <h1>Practice 2: Solution</h1>
+    <h1>Apna College</h1>
+    <hr>
+
+    <p>Curated with &hearts;</p>
+
+</body>
+</html>
