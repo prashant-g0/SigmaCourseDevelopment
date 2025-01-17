@@ -1,0 +1,89 @@
+/* Universal selector */
+* {
+    font-family: cursive;
+}
+
+/* Element selector */
+h1,  h3 {
+    color: #b93b27;
+}
+
+/* ID selector */
+#login, #signup:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Psuedo class */
+/* #login:hover {
+    background-color: #b93b27;
+    color: white;
+} */
+
+#signup, #login:hover {
+    background-color: #b93b27;
+    color: white;
+    cursor: pointer;
+}
+
+/* #signup:hover {
+    background-color: white;
+    color: black;
+} */
+
+p:active {
+    color: #b93b27;
+    font-weight: bold;
+}
+
+/* Class selector */
+.upvote {
+    background-color: green;
+    color: whitesmoke;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.upvote:active {
+    background-color: aquamarine;
+}
+
+/* Descendant selector */
+p a {
+    color: orangered;
+    background-color: yellow;
+}
+
+/* Ajacent sibling combinator */
+p + h3:hover {
+    text-decoration: underline;
+}
+
+.upvote + button {
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Child combinator */
+div > input {
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+/* Attribute selector */
+
+input[type="text"], input[type="password"] {
+    color: chocolate;
+}
+
+input[type="radio"]:checked + label {
+    color: #b93b27;
+    font-weight: bold;
+}
+
+p:nth-of-type(2n) {
+    background-color: bisque;
+}
+
