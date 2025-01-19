@@ -1,0 +1,22 @@
+div {
+    background-color: wheat;
+}
+
+form {
+    background-color: rgb(188, 59, 59);
+}
+
+label {
+    background-color: antiquewhite;
+}
+
+/* button and input are eg. of elements which does not inherit properties until specified. */
+input {
+    /* background-color: inherit; */
+    background-color: rgb(232, 173, 64);
+}
+
+button {
+    /* background-color: inherit; */
+    background-color: aquamarine;
+}

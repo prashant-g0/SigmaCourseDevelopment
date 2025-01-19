@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletors</title>
+</head>
+<body>
+    <h1>Universal selector - *</h1>
+    <p>Used to select everything a document. <br>  * { <br> property: value; <br> }</p>
+    <hr>
+
+    <h1>Element selector</h1>
+    <p>Selects all the elements of same type. <br> tagName { property: value; }</p>
+    <hr>
+
+    <h1>ID selector</h1>
+    <p>Selects an element based on the value of the element's ID attribute. <br> #id { property:  value; } <br> The id name is case sensitive.</p>
+    <hr>
+
+    <h1>Class selector</h1>
+    <p>Select an element based on their class attribute. <br> dot(.)className { property: value; }</p>
+    <hr>
+
+    <h1>Descendant selector</h1>
+    <p>select the tag inside another tag. <br> for eg: div p { property: value; }, <br> this style will be applied to p-tag and not to div-tag.</p>
+    <hr>
+
+    <h1>Adjacent sibling combinator</h1>
+    <p>Selects the element2 which are immediatly after element1. <br> p+h3 { property: value; }, <br> this selects all the h3-tag appearing after p-tag.</p>
+    <hr>
+
+    <h1>Child combinator</h1>
+    <p>selects all the element2 which are direct children of element1. <br> span > button { property: value; }, <br> this selects all and only the button-tag 1 level descendent to span-tag.</p>
+    <hr>
+
+    <h1>Attribute selector</h1>
+    <p>Selects elements based on the presence or value of a given attribute. <br> input [attr="value"] { property: value; }</p>
+    <hr> <hr>
+
+    <h1>Psuedo class </h1>
+    <p>A keyword added to a selector that specifies a special state of the selected elements.</p>
+    <ul>
+        <li>:hover :: changes style on hover </li>
+        <li>:active :: changes style on click</li>
+        <li>:checked :: changes the style of radio buttons and checkbox.</li>
+        <li>:nth-of-type :: changes the style of nth selected element</li>
+    </ul>
+
+    <h1>Psuedo Elements</h1>
+    <p>A keyword added to a selector that tells you style a specific part of the selected elements.</p>
+    <ul>
+        <li>::first-letter - Styles the first letter of the selected element.</li>
+        <li>::first-line - Styles the first line of width of the selected element.</li>
+        <li>::selection - Styles the selection indicator when selecting things on page.</li>
+    </ul>
+    <hr>
+
+    <h1>Specificity</h1>
+    <p>id &gt; class &gt; element </p>
+    <h1>Cascading</h1>
+    <p>An algorithm of CSS which decided which property to implement on the element based on the sequence they are defined. <br> The last defined property for the same element is implemented. <br> eg. if we style h2 color as black and later we again define h2 color blue then blue is the final color.</p>
+    <hr>
+
+    <h1>!important</h1>
+    <p>To show the most specific things in document. <br> h2 { bg-color:  blue !important; } <br> If any style is followed by !important keyword then we can never change it's style. <br> </p>
+    <hr>
+
+    <p>Curated with &hearts;</p>
+    
+</body>
+</html>
