@@ -1,0 +1,46 @@
+/* solution 1 */
+
+.container {
+    height: 400px;
+    width: 400px;
+    background-color: azure;
+    border: 1px solid plum;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.child {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(86, 227, 227);
+    text-align: center;
+    font-size: 50px;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+}
+
+/* solution 2 */
+
+.nav-container{
+    height: 50px;
+    width: 900px;
+    background-color: pink;
+    border: 2px solid brown;
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-child{
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    margin-left: 5px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+

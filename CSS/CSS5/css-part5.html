@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Part 5</title>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <p>It is one dimensional layout method for arranging items in a row or column. <br> element {display: flex;} <br> The elements inside the parent element are now restricted to fit into the parent element block and does not overflow. <br> The default direction is "row" and we can always change the direction to column using "flex-direction" property.</p>
+    <p>The other direction values are: row (left-right), row-reverse (right-left), column (top-bottom) and colummn reverse (bottom-top). <b>The flex properties are given to the parent element.</b></p>
+    <hr>
+
+    <h1>Justify Content</h1>
+    <p>Tells us how the browser distributes space between and around content items along the main axis.</p>
+    <ul>
+        <li>justify-content: flex-start;</li>
+        <li>justify-content: flex-end;</li>
+        <li>justify-content: center;</li>
+        <li>justify-content: space-between;</li>
+        <li>justify-content: space-around;</li>
+        <li>justify-content: space-evenly;</li>
+    </ul>
+    <hr>
+
+    <h1>Flex wrap</h1>
+    <p>Sets whether flex items are forced onto one line or can wrap onto multiples lines.</p>
+    <ul>
+        <li>flex-wrap: nowrap; (default)</li>
+        <li>flex-wrap: wrap; (along main axis)</li>
+        <li>flex-wrap: wrap-reverse; (along main axis but reversed)</li>
+    </ul>
+    <hr>
+
+    <h1>Align items</h1>
+    <p>Distributes our items along cross axis.</p>
+    <ul>
+        <li>align-items: flex-start; (to the top of container)</li>
+        <li>align-items: flex-end; (to the bottom of container)</li>
+        <li>align-items: center; (to the center of container)</li>
+        <li>align-items: baseline; (aligns the items keeping the text line at same height)</li>
+    </ul>
+    <hr>
+
+    <h1>Align Content</h1>
+    <p>It sets the distribution of space betweena and space around content items along a flexbox's cross bar.</p>
+    <ul>
+        <li>align-items: flex-start;</li>
+        <li>align-items: flex-end;</li>
+        <li>align-items: center;</li>
+        <li>align-items: space-around;</li>
+        <li>align-items: space-evenly;</li>
+        <li>align-items: baseline;</li>
+    </ul>
+    <hr>
+
+    <h1>Align self</h1>
+    <p>Aligns an item along cross axis. <b>This property is for individual item/elements.</b></p>
+    <ul>
+        <li>align-self: flex-start;</li>
+        <li>align-self: flex-end;</li>
+        <li>align-self: center;</li>
+        <li>align-self: baseline;</li>
+    </ul>
+    <hr>
+
+    <h1>Flex sizing</h1>
+    <ul>
+        <li>flex-basis: 100px; (it sets the initial main size of a flex item.)</li>
+        <li>flex-grow: 1; (it specifies how much of a flex container's remaining space should be assigned to the flex item's main size.)</li>
+        <li>flex-shrink: 1; (it specifies the shrinking of flex item when overflow is encountered.)</li>
+    </ul>
+    <hr>
+
+    <h1>Flex shorthand</h1>
+    <ul>
+        <li>flex grow | shrink | basis: {flex: 2 2 100px;}</li>
+        <li>flex grow | basis: {flex: 2 100px;}</li>
+        <li>flex grow: {flex: 2;} (unitless)</li>
+        <li>flex basis: {flex: 100px;}</li>
+    </ul>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <p>Curated with &hearts;</p>
+</body>
+</html>
