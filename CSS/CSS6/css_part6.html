@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Part 5</title>
+</head>
+<body>
+    <h1>CSS Grid</h1>
+    <p>Setting a container's display to grid will make all children grid items. <br> container { <br> diaplay: grid; <br> } <br> <b>Grid and Flexbox properties are only applied to direct child nd not on indirect child.</b></p>
+    <hr>
+
+    <h1>Grid Template</h1>
+    <p>They define the lines and track sizing.</p>
+    <ul>
+        <li><b>grid-template-rows</b>: <i>Used to define the number of rows for grid model. The size for each row is given individually.</i></li>
+        <li><b>grid-template-columns</b>: <i>Used to define the number of columns for grid model. The size for each column is given individually.</i></li>
+        <p>'auto' value can also be used for the properties but not preferred for best practice.</p>
+    </ul>
+    <hr>
+
+    <h1>Grid Template: <i>repeat property</i></h1>
+    <p>Repeat is used to divide all available space.</p>
+    <ul>
+        <li>grid-template-rows: repeat(count, 1fr);</li>
+        <li>grid-template-columns: repeat(counnt, 1fr);</li>
+        <li>eg. grid-template-rows: repeat(2, 1fr);</li>
+        <li>eg. grid-template-rows: 1fr, 1fr;</li>
+        <i>fr meaning 1 fraction of 100% available space. width in terms of rows and height in terms of columns.</i>
+    </ul>
+    <hr>
+
+    <h1>Grid gaps</h1>
+    <p>This is used to define space b/w grid cells.</p>
+    <ul>
+        <li>row-gap: 10px;</li>
+        <li>column-gap: 10px;</li>
+        <li>grid-gap: rowGap, colGap;</li>
+    </ul>
+    <hr>
+
+    <h1>Grid columns</h1>
+    <p>Defines an item's starting and ending position inside the column.</p>
+    <ul>
+        <li>grid-column-start: line_number;</li>
+        <li>grid-column-end: line_number;</li>
+        <li>grid-column: start_col/end_col;</li>
+        <li>grid-column: start_col/span number;</li>
+        <li>eg. grid-column: 1/4; <i>here we have described the line number.</i></li>
+        <li>eg. grid-column: 1/span 3; <i>here we have described the total number of box</i></li>
+    </ul>
+    <hr>
+    
+    <h1>Grid rows</h1>
+    <p>Defines an item's starting and ending posintion inside a row.</p>
+    <ul>
+        <li>grid-row-start: line_number;</li>
+        <li>grid-row-end: line_number;</li>
+        <li>grid-row: start_row/end_row;</li>
+        <li>grid-row: start_row/span number;</li>
+        <li>eg. grid-row: 1/4; <i>here we have described the line number.</i></li>
+        <li>eg. grid-row: 1/span 3; <i>here we have described the total number of box</i></li>
+    </ul>
+    <hr>
+
+    <h1>Grid properties</h1>
+    <ul>
+        <li>jsutify-items: <i>used in container to give horizontal alignment.</i></li>
+        <li>justify-self: <i>used for specific items to align horizontaly.</i></li>
+        <li>align-items: <i>used in container to give vertically alignment.</i></li>
+        <li>align-self: <i>used in specific items to align vertically.</i></li>
+        <li>place-items: <i>used in container as a combined property of justify-items and align-items when the value for both is same.</i></li>
+        <li>place-self: <i>used in container as a combined property of justify-self and align-self when the value for both is same.</i></li>
+    </ul>
+    <hr>
+
+    <h1>CSS Animations</h1>
+    <p>Used to animate CSS elements.</p>
+    <p>@keyframes animationNAme{ <br>&nbsp; &nbsp;&nbsp;&nbsp;from{font-size: 3px;} <br>&nbsp;&nbsp;&nbsp;&nbsp; to{font-size: 5px} <br> }</p>
+    <p>@keyframes animationNAme{ <br>&nbsp; &nbsp;&nbsp;&nbsp;0%{font-size: 3px;} <br>&nbsp;&nbsp;&nbsp;&nbsp; 50%{font-size: 5px} <br>&nbsp;&nbsp;&nbsp;&nbsp; 100%{font-size: 15px} <br> } </p>
+    <h3>Animation properties:</h3>
+    <ul>
+        <li>animation-name</li>
+        <li>animation-duration</li>
+        <li>animation-timing-function</li>
+        <li>animation-delay</li>
+        <li>animation-iteration-count</li>
+        <li>animation-direction</li>
+        <p>Animation shorthand</p>
+        <li>animation: name duration timing-function delay iteration direction;</li>
+    </ul>
+    <hr>
+
+    <h1>Media queries</h1>
+    <p>Helps create a responsive website compatible with all devices and screen sizes.</p>
+    <p>@media (min-width: 400px) {div{height:20px;}} <br> This will cause change in height of div element when screen width is min 400px.</p>
+    <a href="https://www.w3schools.com/css/css_rwd_intro.asp">Learn more.</a>
+    <hr>
+
+    <h1>z-index</h1>
+    <p>It decides the stack level  of the elements. <br> Overlapping elements with a larger z-index covers those with smaller ones.</p>
+    <ul>
+        <li>z-index: auto(0);</li>
+        <li>z--index: 1/2;</li>
+        <li>z--index: -1/-2;</li>
+    </ul>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    Curated with &hearts;
+</body>
+</html>
