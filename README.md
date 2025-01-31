@@ -8,6 +8,9 @@ All the files of HTML lessons are stored in HTML folder. I have prepared them as
 ## CSS 
 All the files of CSS and the HTML files on which CSS is applied during the course and practice are stored in CSS folder. The HTML file name and CSS file name are kept same for easiness. The practice question are either solved in file or in another file named as practiceQs and assignment.
 
+## BOOTSTRAP
+The HTML file of lecture and assignment are uploaded. The HTML file uses BOOTSTRAP CSS to style the elements. 
+
 ## JavaScript
 Yet to upload.  Please wait!
 
