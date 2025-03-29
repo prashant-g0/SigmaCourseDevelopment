@@ -1,28 +1,32 @@
-# Sigma Development Course by Apna College.
+# Sigma Development Course by Apna College  
 
-This repository is for development part of this course and contains all the files I created as notes or practice during the period.
+This repository contains all the notes, practice files, and assignments I created during the development part of this course.  
 
-## HTML
-All the files of HTML lessons are stored in HTML folder. I have prepared them as a notes. Each file is named as lecture number or assignment number. The folders also contain the practice questions solved in the same file.
+## 📂 Folder Structure  
 
-## CSS 
-All the files of CSS and the HTML files on which CSS is applied during the course and practice are stored in CSS folder. The HTML file name and CSS file name are kept same for easiness. The practice question are either solved in file or in another file named as practiceQs and assignment.
+### 🟠 HTML  
+- All HTML lesson files are stored in the **HTML** folder.  
+- Each file is named according to the lecture number or assignment number.  
+- Practice questions are either solved within the same file or in a separate file.  
 
-## BOOTSTRAP
-The HTML file of lecture and assignment are uploaded. The HTML file uses BOOTSTRAP CSS to style the elements. 
+### 🔵 CSS  
+- All CSS lesson files and related HTML files are stored in the **CSS** folder.  
+- The CSS file names match their respective HTML files for better organization.  
+- Practice questions and assignments are solved in either the main file or an additional **practiceQs** or **assignment** file.  
 
-## JavaScript
-Yet to upload.  Please wait!
+### 🟣 BOOTSTRAP  
+- Contains **HTML files** from the lectures and assignments that utilize Bootstrap for styling.  
 
-## Author
+### 🟢 JavaScript  
+- 📌 **Lecture-wise notes for JavaScript have been uploaded!**  
+- I will keep adding more notes regularly.  
+- Find all JavaScript-related content in the **JavaScript** folder.  
 
-[Prashant Gupta](https://www.github.com/prashant-g0/)
+## 👨‍💻 Author  
+[Prashant Gupta](https://www.github.com/prashant-g0/)  
 
-Please use for learning purpose only.
-
-## License
-
+## 📜 License  
+[Prashant Gupta](https://www.github.com/prashant-g0/)  
 [Apna College](https://www.apnacollege.in/)  
 
-
-[Prashant Gupta](https://www.github.com/prashant-g0/)
+⚡ *Please use this repository for learning purposes only.*  
