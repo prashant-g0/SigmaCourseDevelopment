@@ -26,7 +26,7 @@ This repository contains all the notes, practice files, and assignments I create
 [Prashant Gupta](https://www.github.com/prashant-g0/)  
 
 ## 📜 License  
-[MIT](License)  
+[MIT](LICENSE)  
 [Apna College](https://www.apnacollege.in/)  
 
 ⚡ *Please use this repository for learning purposes only.*  
