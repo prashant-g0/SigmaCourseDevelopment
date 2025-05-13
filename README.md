@@ -18,9 +18,15 @@ This repository contains all the notes, practice files, and assignments I create
 - Contains **HTML files** from the lectures and assignments that utilize Bootstrap for styling.  
 
 ### 🟢 JavaScript  
-- 📌 **Lecture-wise notes for JavaScript have been uploaded!**  
-- I will keep adding more notes regularly.  
-- Find all JavaScript-related content in the **JavaScript** folder.  
+- **Lecture-wise notes for JavaScript have been uploaded!**    
+- Find all JavaScript-related content in the **JavaScript** folder.
+- Each file is named according to the lecture number.
+
+### 🟣 Terminal  
+- Lecture notes added
+
+### 🔴 Git & GitHub  
+- Uploading soon...  
 
 ## 👨‍💻 Author  
 [Prashant Gupta](https://www.github.com/prashant-g0/)  
