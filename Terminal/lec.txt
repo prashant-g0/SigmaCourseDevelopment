@@ -1,0 +1,90 @@
+The Terminal: A text input and output environment.
+
+Different Terms:
+-> Command Line: Any interface that us used by entering textual commands (gen. Windows centric)
+-> Terminal: This is a type of command Line (gen. Mac centric)
+-> Console: A command line interface used to work with your computer
+
+-> Shell: A program running on terminal
+    -> Bash: A popular shell on Mac OS/Linux
+    -> Z-Shell: Another shell (default)
+
+
+Basic commands:
+
+Unix/Linux/macOS  |	Windows CMD Equivalent	| Description
+
+ls                |	dir	                    | List files and folders
+pwd	              | cd (just type cd)	    | Show current directory
+cd folder	      | cd folder	            | Change directory
+clear	          | cls	                    | Clear the terminal screen
+rm file.txt	      | del file.txt	        | Delete a file
+mv old new	      | ren old new or move	    | Rename or move a file
+cp file1 file2	  | copy file1 file2	    | Copy a file
+touch file.txt	  | echo. > file.txt	    | Create a new empty file
+
+Shortcuts: 
+upward key : brings the past executed commands sequntially
+downward key : brings back to executed comands in downward direction
+
+Navigation: inside & outside directories
+-> Single Level Navigation
+cd folderName : to move inside of the folder
+cd .. : to move outwards
+
+-> Multilevel Navigation:
+cd folderName/folderName
+cd ../.. 
+
+Paths: Absolute & Relative
+A path is the address of a file or folder in your system. It tells the system where to find something.
+
+-> Absolute Path
+An absolute path is the full path from the root of the file system. It always starts with a drive letter like C:\.
+eg. cd C:\Users\systemName\Desktop\TestFolder
+
+-> Relative Path
+A relative path is based on your current working directory (you can check it with cd).
+eg. If already in => C:\Users\aipri\OneDrive\Desktop
+    then just do => cd TestFolder
+
+Making directory
+-> Single directory
+mkdir folderName
+
+-> Multiple directory
+mkdir outsideFolderName/insideFolderName
+
+Deleting files:
+del filename : deletes permanently instead of sending it to recycle bin 
+del *.txt -> deletes all .txt files
+del *.* -> deletes all files in the folder
+
+Deleting folders:
+rmdir folderName : to delete empty folder
+rmdir /s folderName : to delete folder with contents; will receive a Y/N prompt
+rmdir /s /q folderName : to skip the cofirmation 
+
+Flags: are characters that we pass with commands to modify their behaviour
+Flags are extra parameters added to a command to modify its behavior.
+They usually start with / in Windows CMD, or - or -- in Unix/Linux.
+
+Eg. of flags in windows CMD
+1. del /f /q filename
+/f -> force delete read-only files
+/q -> quiet mode (no confirmation)
+
+2. rmdir /s /q folderName
+/s -> delete the folder and its contents
+/q -> quiet mode (no confirmation)
+
+3. xcopy /s /e source destination 
+/s -> Copies non-empty directories
+/e -> Copies all directories (Even empty ones)
+
+4. dir /b /s
+/b -> bare format (just filename)
+/s -> Recursive (lists all files in all subdirectories)
+
+Manual commands:
+command /? : to learn more about the command
