@@ -6,7 +6,7 @@ This repository contains all the notes, practice files, and assignments I create
 
 ### 🟠 HTML  
 - All HTML lesson files are stored in the **HTML** folder.  
-- Each file is named according to the lecture number or assignment number.  
+- Each file is named according to the lecture number.  
 - Practice questions are either solved within the same file or in a separate file.  
 
 ### 🔵 CSS  
@@ -26,7 +26,7 @@ This repository contains all the notes, practice files, and assignments I create
 - Lecture notes added
 
 ### 🔴 Git & GitHub  
-- Uploading soon...  
+- Added the notes for Git and GitHub.  
 
 ## 👨‍💻 Author  
 [Prashant Gupta](https://www.github.com/prashant-g0/)  
