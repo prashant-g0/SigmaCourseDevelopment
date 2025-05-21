@@ -1,0 +1,156 @@
+==> What is Node js?
+javaScript Runtime Environment
+It is used for server side programming.
+**Node.js is not a language, library, or framework.
+
+-----------------------------------------------------------------
+
+==> Node JS installation
+https://nodejs.org/en/download
+
+-----------------------------------------------------------------
+
+==> Node REPL
+R: Read
+E: Evaluate
+P: Print
+L: Loop
+
+.help gives us commands
+
+open terminal -> type "node" to get into world of node js -> now terminal commands are non-recognized 
+now we can work with js language
+
+-----------------------------------------------------------------
+
+==> Node files
+node fileName.js
+
+go to the directory using terminal -> create a js file -> write the js code -> to run: node fileName.js
+
+-----------------------------------------------------------------
+
+==> Process
+process: this object provides information about, and control over, the current Node.js process.
+process.argv: returns an array containing the command line arguments passed when the Node.js process was launched.
+
+-----------------------------------------------------------------
+
+==> module.exports : requiring files
+
+require() : a built in function to include external modules that exist in separate files.
+module.exports : a special object
+
+let say we have two files script.js and math.js in the same directory/folder
+
+-> file : math.js
+const g = 9.8;
+const pi = 3.14;
+const sum = (a, b) => a+b;
+const mul = (a, b) => a*b;
+
+let obj = {
+    sum:sum,
+    mul:mul,
+    g=g,
+    pi=pi,
+};
+
+module.exports = obj;
+
+//we can directly pass the values by writing module.exports instead of let obj
+module.exports = {
+    sum:sum,
+    mul:mul,
+    g=g,
+    pi=pi,
+};
+
+// we can also pass things directly as 
+module.exports.g = 9.8;
+module.exports.pi = 3.14;
+module.exports.sum = (a, b) => a+b;
+module.exports.mul = (a, b) => a*b;
+
+//also as 
+exports.g = 9.8;
+exports.pi = 3.14;
+exports.sum = (a, b) => a+b;
+exports.mul = (a, b) => a*b;
+
+//but not as 
+exports = 5; //this will be treated as variable and not as method
+
+
+-> file : script.js
+const math = require("./math");
+console.log(math);
+console.log(math.sum(2, 2))
+
+-> in terminal : node script.js 
+{ sum : [Function: sum], mul : [Function: mul], g: 9.8, pi: 3.14 }
+4
+
+**in this way we can use code, functions, and blocks of one file in other 
+
+-----------------------------------------------------------------
+
+==> module.exports : requiring directories
+
+require() : a built in fucntion to include external modules that exist in separate files
+module.exports : a special object
+
+let say we have two directories backend and fruits with different files
+
+fruits directory will have a special file named "index.js" strictly this name only
+this index.js file will require all the other files and then export all the requirements
+
+backend files will now require this directory 
+//const info = require("./fruits"); 
+//console.log(info);
+//console.log(info[0].name)
+
+-----------------------------------------------------------------
+
+==> NPM (Node Package Manager)
+npm is the standard package manager for Node.js
+** imagine this as a library of package
+** command line tool
+
+-> Installing packages using npm 
+website: https://npmjs.com
+command line: npm install <package name> OR npm i <package name>
+eg. npm install figlet (make sure to store packages in directory and package scope is that directory only)
+
+- node_modules: The node_modules folder constains every installed dependency for your project
+- package-lock.json: it records the exact version of every installed dependency, including its sub-dependencies and their versions.
+
+- package.json:  the package.json file constains descriptive and functional metadata about a project, such as a name, version, and dependencies.
+to create package.json file for your project : go to the project directory -> in terminal : npm init -> follow the process -> your file is created
+
+
+==> local vs Global installation
+npm install -g <package name>
+npm link <package name>
+
+- local installation only work for that directory and cannot be accessed by other directories.
+- to tackle this, global installation can be specified just by adding -g flag in the installation command
+
+-----------------------------------------------------------------
+
+==> require vs import 
+import {sum} from "./math.js"
+
+- we can't selectively load only the pieces we need with require but with import, we can selectively load only the pieces we need, which can save memory.
+- Loading is synchronous for 'require' but can be asynchronous for 'import'.
+
+- to import things we first need to export it
+export const sum = (a,b) => a+b;
+export const mul = (a,b) => a*b;
+
+now import these:
+import {sum, mul} from "./math.js";
+
+** to import-export we need to have a package.json file in the directory with type: module specified.
+
+

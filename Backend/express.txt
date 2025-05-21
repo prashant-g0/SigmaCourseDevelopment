@@ -1,0 +1,103 @@
+==> Library vs Framework
+Library: A library is a collection of pre written code that can be used to perform specific tasks.
+eg. axios
+
+Framework: A framework is a set of pre written code that provides a structure for developing software applications.
+eg. express
+
+-----------------------------------------------------------------
+
+==> Express
+- A Node.js web application framework that helps us to make web applications
+- It is used for server side programming.
+
+-- Listen to incoming requests
+-- parse
+-- match response with routes
+-- response
+
+-> Getting started with Express
+const express = require("express");
+const app = express();
+
+let port = 8080;
+
+app.listen(port, ()=> {
+    console.log(`app  listening on port ${port}`);
+});
+
+- ports are the logical endpoints of a network connection that is used to exchange information between a web server and a web client.
+
+-> app.use
+app.use((req, res) => {
+    console.log("New incoming request");
+});
+
+-----------------------------------------------------------------
+
+-> Sending a response
+res.send("Hello");
+using this we can send
+
+-> HTML code
+res.send("<h1> HEllo! </h1>);
+
+-> object 
+res.send({
+    fruits: "apples",
+    color: "red",
+});
+
+-> normal strings
+res.send("Confirmed!");
+
+-----------------------------------------------------------------
+
+==> Routing
+It is process of selecting a path for traffic in a network or between or across multiple networks.
+
+app.get("/apple", (req,res) => {
+    res.send({
+        name: "apple",
+        color: "red",
+    });
+});
+
+app.get(PATH, CALLBACK);
+PATH = "*" catches all the undefined paths and throws customized error
+
+-----------------------------------------------------------------
+
+==> Nodemon
+To automatically restart server with code changes
+```
+nodemon index.js
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+app listening on port 3000
+-> as we made the changes, server automatically restarted
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+app listening on port 3000
+```
+
+-----------------------------------------------------------------
+
+==> Path parameters
+-> req.params 
+
+app.get("/ig/:username", (req, res)=> {
+    let {username} = req.params;
+    res.send(`This account belongs to @${username}`);
+})
+
+-> req.query
+
+app.get("/search", (req, res) => {
+    let {q} = (req.query);
+    res.send("success");
+    console.log(`your query is ${q}`);
+});
