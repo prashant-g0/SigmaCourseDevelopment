@@ -1,0 +1,99 @@
+==> Website: ejs.co 
+
+==> What is Templating ?
+- EJS (Embedded JavaScript templates)
+- EJS is a simple templating language that let's you generate HTML markup with plain JavaScript.
+
+-- Creating a template format for a page and displaying related results on that template, this reduces the number of pages required.
+
+Creating a EJS setup 
+---> npm init -y (package.json file)
+---> npm i express (setup express)
+---> npm i ejs (installs EJS for the directory)
+
+==> Using EJS
+app.set("view engine", "ejs");
+
+app.get("/", (req, res) => {
+    res.render("home.ejs");
+});
+
+---> All templates should be stored in folder named "views".
+
+==> Views directory
+const path = require("path");
+app.set("views", path.join(__dirname, "/views"));
+
+This will always ensure that the servers looks for the templates in correct directory even when the server is started from different path.
+
+==> Interpolation Syntax
+Interpolation refers to embedding expressions into marked up text.
+
+Tags
+<% 'Scriptlet' tag, for control-flow, no output
+<%_ ‘Whitespace Slurping’ Scriptlet tag, strips all whitespace before it
+<%= Outputs the value into the template (HTML escaped)
+<%- Outputs the unescaped value into the template
+<%# Comment tag, no execution, no output
+<%% Outputs a literal '<%'
+%> Plain ending tag
+-%> Trim-mode ('newline slurp') tag, trims following newline
+_%> ‘Whitespace Slurping’ ending tag, removes all whitespace after it
+
+
+==> Parsing Data to EJS
+app.get("/rolldice"' (req, res)=>{
+    let num =Math.floor(Math.random()*6)+1;
+    res.render("rolldice.ejs", {diceval:num});
+});
+
+//in HTML
+<h1> Your dice gave value: <%= diceval %> <h1>
+
+==> Instagram EJS
+Create a basic template for instagram page based on following route:
+/ig/:username
+
+==> Conditional statements in EJS
+Adding conditions inside EJS
+
+<% if (diceval == 6) { %>
+<h2> Nice! Roll Dice again.</h2>
+<% } %>
+
+==> Loops in EJS
+<% for(user of followers) { %>
+    <li> <%= user %> </li>
+<% } %>
+
+==> Instagram page with EJS
+const instaData = require("./data.json");
+
+==> Serving Static files
+app.use(express.static(folderName));
+app.use(express.static(path.join(__dirname, "public")));
+
+==> Includes
+a way to create sub-templates
+
+<%- include("includes/head.ejs"); %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

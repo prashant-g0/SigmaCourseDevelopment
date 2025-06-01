@@ -1,0 +1,162 @@
+==> GET & POST Requests
+-> Get 
+Used to GET some response.
+Data sent in query strings (limited, string data & visible in URL)
+
+-> POST
+Used to POST something (for Create/Write/Update)
+Data sent via request body (any type of data)
+
+==> Handling POST Requests
+Set up POST request route to get some response
+Parse POST request data
+
+app.use(express.urlencoded({encoded: true}));
+app.use(express.json());
+
+==> Factory Functions
+A function that creates objects
+(for eg., structures in C or classes in OOPS)
+
+function PersonMaker(name, age) {
+    const person = {
+        name: name, age: age, 
+        talk() {
+            console.log(`Hii, my name is ${this.name}`);
+        },
+    };
+    return person;
+}
+
+let p1 = PersonMaker("Raj", 20);
+let p2 = PersonMaker("Aditya", 19);
+let p3 = PersonMaker("Manish", 21);
+
+Although this method is good enough to create a blueprint of objects for n number of data, but still inefficient as it creates individual copy for each data leading to large memory usage.
+
+==> New Operator
+The new Operator lets developers create an instance of a user-defined object 
+type or of one of the built-in object types that has a constructor function.
+
+//Constructor : doesn't return anything & start with capital
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.talk = function () {
+    console.log(`Hii, my name is ${this.name}`);
+};
+
+let p1 = new Person("Raj", 20);
+let p2 = new Person("Aditya", 19);
+let p3 = new Person("Manish", 21);
+
+This is better than using factory function, but this can also be optimized by implementing classes.
+
+==> Classes
+Claases are a template for creating objects.
+The constructor method is a special method of a class for creating and initializing an object instance of that class.
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    talk() {
+        console.log(`Hi, my name is ${this.name}`);
+    }
+}
+
+let p1 = new Person("Harsha", 25); 
+let p1 = new Person("Riya", 24); 
+
+==> Inheritance
+Inheritance is a mechanism that allows us to create new classes on the basis of already existing classes.
+
+class Student extends Person {
+    constructor(name, age, marks){
+        super(name, age);
+        this.marks = marks;
+    }
+
+    greet(){
+        return "hello!";
+    }
+}
+
+let s1 = new Student("Rakshita", 20, 98);
+
+Summary of OOPS:
+
+-> What is OOP ?
+OOP is a programming paradigm in computer science that relies on the concept of classes and objects. 
+It is used to structure a software program into somple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects.
+
+-> What are some benefits of using OOP in JavaScript ?
+Some benefits of usinng OOP in JS includes:
+-Improved code organization (structure of code)
+-Reusability of code
+-Better maintainability of code
+-Closeness to real-world objects
+
+-> What is the difference between an object and a class in javascript ?
+Objects in JS is a standalone entity, with properties, methods and a type. It can be created directly from functions through constructor functions.
+Class in JS acts as a blueprint for crreating objects.
+
+-> What is a Constructor function in JS ?
+Constructor function is a special function that used to create & initialize objects in JS. 
+When a new object is created using a constructor function, it is automatically assigned a set of properties 
+and methods that are defined within the function.
+
+-> What is a prototype chain in JavaScript ?
+Every object in JS has a builtin property,which is called its prototype. 
+The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. 
+The chain ends when we reach a prototype that has null for its own prototype.
+
+-> What is the difference between a constructor and a class in javascript ?
+A constructor is a function that creates an object, while a class is a blueprint for creating objects.
+Classes defines the framework whereas, constructor actually creates the objects & initializes them.
+(In JS, classes are syntactic sugar over constructor functions)
+
+-> Why is the "NEW" keyword used in JS ?
+The 'NEW' keyword is used to create an instance of an object. 
+When used with a constructor funnction, it creates a new object and sets the consdtructor function's 'this' keyword to point to the new object.
+
+-> What is Inheritance in OOP ?
+Inheritance in OOP is defined as the ability of a class to derive properties and characteistics from another class while having its own properties as well.
+
+-> What is the "Super" keyword in JS ?
+The super keyword in JS acts as a reference variable to the parent class.
+It is mainly used when we want to access a variable, method, or constructor in the base class from the derived class.
+
+-> What will be the output for the following code:
+
+class Box { 
+    constructor (name, l, b) { 
+        this.name = name; 
+        this.l = l; 
+        this.b = b; 
+    } 
+
+    area() { 
+        let area this.l this.b; 
+        console.log('Box area is ${area}'); 
+    } 
+} 
+
+class Square extends Box { 
+    constructor(a) { 
+        super("square", a, a); 
+    } 
+
+    area() { 
+        let area = this.l this.b; 
+        console.log('Square area is ${area}'`); 
+    } 
+} 
+
+let sq1 = new Square(4); 
+sq1.area();
+
+The output will be "Square area is 16" as the child class (square) implementation of area () function will override parent class (box) immplementation of the function with the same name.
